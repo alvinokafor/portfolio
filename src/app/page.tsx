@@ -1,103 +1,243 @@
-import Image from "next/image";
+"use client";
 
-export default function Home() {
+import Link from "next/link";
+
+export default function Portfolio() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="min-h-screen bg-[#09090b] text-[#D4D4D8] px-4 py-16 md:px-8 lg:px-16 flex flex-col items-center">
+      <main className="w-full max-w-3xl mx-auto">
+        <header className="mb-8">
+          <div className="h-8 overflow-hidden font-medium relative text-[#D4D4D8]">
+            <div className="animate-slide-text">
+              <div className="py-1">Chinedu Alvin Okafor</div>
+              <div className="py-1">Software Engineer</div>
+              <div className="py-1">Music Producer</div>
+              <div className="py-1">Human</div>
+              <div className="py-1">Chinedu Alvin Okafor</div>{" "}
+              {/* Repeat first item for seamless loop */}
+            </div>
+            <style jsx>{`
+              @keyframes slideText {
+                0% {
+                  transform: translateY(0);
+                }
+                20% {
+                  transform: translateY(-20%);
+                }
+                40% {
+                  transform: translateY(-40%);
+                }
+                60% {
+                  transform: translateY(-60%);
+                }
+                80% {
+                  transform: translateY(-80%);
+                }
+                100% {
+                  transform: translateY(0);
+                }
+              }
+              .animate-slide-text {
+                animation: slideText 12s ease-in-out infinite;
+              }
+            `}</style>
+          </div>
+        </header>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
+        <section className="mb-10">
+          <p className="text-[#e4e4e7] mb-2">
+            I'm a <span className="text-[#99A1AF]">Software Engineer</span> on a
+            mission to build <span className="text-[#99A1AF]">impactful</span>{" "}
+            consumer products.
+          </p>
+          <p className="text-[#e4e4e7]">
+            With <span className="text-[#99A1AF]">3+ years</span> of experience,
+            I'm all about creating{" "}
+            <span className="text-[#99A1AF]">user-friendly</span> solutions that
+            tackle real-world problems, the kind that genuinely make a
+            difference in people's lives! When I'm not coding, you can find me
+            making music or lost in the world of film.
+          </p>
+        </section>
+
+        <section className="mb-10">
+          <h2 className="text-xl mb-4 text-[#D4D4D8] ">Work</h2>
+          <div className="flex flex-col gap-2">
+            <div className="flex items-center gap-2">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="text-[#d4d4d8]"
+              >
+                <path
+                  d="M18 13V19C18 19.5304 17.7893 20.0391 17.4142 20.4142C17.0391 20.7893 16.5304 21 16 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V8C3 7.46957 3.21071 6.96086 3.58579 6.58579C3.96086 6.21071 4.46957 6 5 6H11"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M15 3H21V9"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M10 14L21 3"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+              <a
+                href="https://bookumapp.com/"
+                className="text-[#99A1AF] underline hover:text-[#D4D4D8] transition-colors"
+              >
+                Bookum
+              </a>
+            </div>
+            <div className="flex items-center gap-2">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="text-[#d4d4d8]"
+              >
+                <path
+                  d="M18 13V19C18 19.5304 17.7893 20.0391 17.4142 20.4142C17.0391 20.7893 16.5304 21 16 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V8C3 7.46957 3.21071 6.96086 3.58579 6.58579C3.96086 6.21071 4.46957 6 5 6H11"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M15 3H21V9"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M10 14L21 3"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+              <a
+                href="https://www.mediqihealth.com"
+                className="text-[#99A1AF] underline hover:text-[#D4D4D8] transition-colors"
+              >
+                MEDIQ-i
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section className="mb-10">
+          <h2 className="text-xl mb-4 text-[#D4D4D8]">
+            Tools, Languages, Libraries & Frameworks
+          </h2>
+          <div className="flex flex-wrap gap-x-4 gap-y-2 text-[#99A1AF]">
+            {[
+              "React.js",
+              "Next.js",
+              "React Native",
+              "Astro.js",
+              "Radix UI",
+              "Chakra UI",
+              "Material UI",
+              "Zustand",
+              "Tanstack Query",
+              "Express.js",
+              "Postgres SQL",
+              "Supabase",
+              "BullMQ(Redis)",
+              "Netlify",
+              "Railway",
+              "Vercel",
+              "Javascript",
+              "Typescript",
+              "CSS",
+              "HTML",
+              "Tailwind CSS",
+            ].map((tech) => (
+              <span
+                key={tech}
+                className="cursor-pointer hover:text-[#D4D4D8] hover:scale-105 transition-all duration-200"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+        </section>
+
+        <section className="mb-16">
+          <h2 className="text-xl mb-4">Writing</h2>
+          <ul className="list-disc list-inside text-[#d4d4d8]">
+            <li>
+              <a
+                href="https://medium.com/@alvinokafor/handling-multiple-github-user-accounts-on-one-computer-4d50792e4c7f"
+                className="underline text-[#99A1AF] hover:text-[#D4D4D8]"
+              >
+                Handling Multiple Github User Accounts On One Computer
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <footer className="flex gap-6 text-[#99a1af]">
           <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href="https://drive.google.com/file/d/1Ujxz09iJLwwGvwWcERXrXObJDL7D_P2x/view?usp=sharing"
             target="_blank"
-            rel="noopener noreferrer"
+            className="hover:text-[#ffffff] transition-colors"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
+            resume
           </a>
           <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:alvin2k99@gmail.com"
+            className="hover:text-[#ffffff] transition-colors"
           >
-            Read our docs
+            mail
           </a>
-        </div>
+          <a
+            href="https://x.com/retrosearth"
+            target="_blank"
+            className="hover:text-[#ffffff] transition-colors"
+          >
+            twitter
+          </a>
+          <a
+            href="https://www.linkedin.com/in/chinedu-okafor-05a4a91a1/"
+            target="_blank"
+            className="hover:text-[#ffffff] transition-colors"
+          >
+            linkedin
+          </a>
+          <a
+            href="https://github.com/alvinokafor"
+            target="_blank"
+            className="hover:text-[#ffffff] transition-colors"
+          >
+            github
+          </a>
+          <a
+            href="https://open.spotify.com/playlist/08GACrIWtNtdPOIVYCG629?si=77949fb3264e4719"
+            target="_blank"
+            className="hover:text-[#ffffff] transition-colors"
+          >
+            my music
+          </a>
+        </footer>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }
